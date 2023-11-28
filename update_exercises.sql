@@ -1,3 +1,5 @@
+use hippo_anna;
+
 -- Write SELECT statements to output each of the following with a caption:
 --
 --     All albums in your table.
@@ -13,12 +15,11 @@ SELECT * FROM albums where artist = 'Michael Jackson'
 --     Make all the albums 10 times more popular (sales * 10)
 update albums
 set sales = sales * 10
-where artist = 'Michael Jackson'
 
 --     Move all the albums before 1980 back to the 1800s.
--- update albums
--- set release_date = 1800;
--- where release_date < 1980;
+update albums
+set release_date = release_date - 100
+where release_date < 1980
 
 --     Change 'Michael Jackson' to 'Peter Jackson'
 update albums

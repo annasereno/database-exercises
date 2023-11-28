@@ -1,7 +1,7 @@
 use hippo_anna;
 
 -- write queries to find the following information:
---
+
 -- The name of all albums by Pink Floyd.
 SELECT name FROM albums WHERE artist = 'Pink Floyd';
 
@@ -18,4 +18,5 @@ SELECT * FROM albums WHERE release_date between 1990 and 1999;
 SELECT * FROM albums WHERE sales <= 20;
 
 -- All the albums with a genre of "Rock". Why do these query results not include albums with a genre of "Hard rock" or "Progressive rock"?
-SELECT * FROM albums WHERE genre like 'Rock';
+SELECT * FROM albums WHERE genre = 'Rock';
+SELECT * FROM albums WHERE genre like '%Rock%';
